@@ -5,18 +5,17 @@ import { Search } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4 text-pink-900 shadow-lg bg-gradient-to-r from-pink-300 to-pink-400">
-     <div className="flex items-center space-x-2">
-  <Link href="/" className="flex items-center space-x-2 transition-colors duration-300 hover:opacity-80">
-    <img
-      src="/logof.png" 
-      alt="Flower Shop Logo"
-      className="object-contain w-24 h-auto" 
-    />
-  </Link>
-</div>
+    <header className="flex items-center justify-between p-4 text-pink-900 shadow-lg bg-[linear-gradient(to_right,_white_15%,_#CF0B63_50%,_#5a0429)]">
+      <div className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2 transition-colors duration-300 hover:opacity-80">
+          <img
+            src="/logof.png" 
+            alt="Flower Shop Logo"
+            className="object-contain w-24 h-auto" 
+          />
+        </Link>
+      </div>
 
-      
       <nav className="flex space-x-8">
         <Link 
           href="/" 
