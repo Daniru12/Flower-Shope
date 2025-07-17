@@ -1,7 +1,12 @@
 import Image from "next/image";
+import Header from './components/Header';
+import HeroSection from './Components/HeroSection'
 
 export default function Home() {
   return (
-    <h1>Flower shop Home page</h1>
+    <>
+    
+      <HeroSection />
+    </>
   )
 }
