@@ -48,7 +48,7 @@ export default function HomePage() {
               <div className={`w-32 mb-4 border-t border-black transform transition-all duration-1000 delay-700 ${
                 isLoaded ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
               }`}></div>
-              <p className={`mb-6 text-lg leading-relaxed text-black transform transition-all duration-1000 delay-900 ${
+              <p className={`mb-6 text-lg leading-relaxed text-black font-bold transform transition-all duration-1000 delay-900 ${
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               }`}>
                 Welcome to <span className="font-semibold text-pink-800">Bloom Haven</span> – where fresh, hand-picked flowers meet elegant design. Explore our stunning bouquets, seasonal arrangements and special offers.
