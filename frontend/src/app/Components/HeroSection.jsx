@@ -10,7 +10,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pink-200">
+    <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-0 mb-0 overflow-hidden bg-pink-200">
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-pink-200 via-pink-300 to-pink-400"></div>
       <video
         className="absolute inset-0 z-0 object-cover w-full h-full"
