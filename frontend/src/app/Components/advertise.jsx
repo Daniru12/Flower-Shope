@@ -23,7 +23,7 @@ const Advertise = () => {
       title: "Unique Flowers Like Your Unique Personality",
       subtitle: "Premium Wedding Bouquets",
       description: "Transform your special day with stunning arrangements and charming styling. Each flower is crafted to reflect your individuality.",
-      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=400&fit=crop",
+      image: "/shop1.jpeg",
       price: "Starting from $89",
       rating: 4.9,
       category: "Wedding Flowers",
@@ -31,10 +31,10 @@ const Advertise = () => {
     },
     {
       id: 2,
-      title: "Elegant Bridal Photography",
+      title: "Elegant Bridal Flower Boques",
       subtitle: "Capture Your Perfect Moments",
       description: "Professional wedding photography that tells your love story. Every shot crafted with artistic vision and attention to detail.",
-      image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&h=400&fit=crop",
+      image: "/wedding.jpeg",
       price: "Packages from $1,200",
       rating: 4.8,
       category: "Photography",
@@ -42,24 +42,24 @@ const Advertise = () => {
     },
     {
       id: 3,
-      title: "Luxury Wedding Venues",
+      title: "Luxury Wedding Hall Arrangement decorations",
       subtitle: "Dreamy Locations Await",
       description: "Discover breathtaking venues that provide the perfect backdrop for your special day. From gardens to ballrooms.",
-      image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&h=400&fit=crop",
+      image: "/romance.jpeg",
       price: "From $2,500/day",
       rating: 4.7,
-      category: "Venues",
+      category: "Hall Arrangement",
       color: "from-emerald-100 to-teal-200"
     },
     {
       id: 4,
-      title: "Artisan Wedding Cakes",
+      title: "Artisan Wedding Hall rrangement",
       subtitle: "Sweet Perfection",
       description: "Custom wedding cakes designed to complement your celebration. Each creation is a masterpiece of flavor and beauty.",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop",
+      image: "/shop2.jpeg",
       price: "From $150",
       rating: 4.9,
-      category: "Catering",
+      category: "Capturing",
       color: "from-amber-100 to-orange-200"
     }
   ];
