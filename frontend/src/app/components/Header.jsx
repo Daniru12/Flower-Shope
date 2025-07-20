@@ -25,14 +25,14 @@ export default function Header() {
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link 
-          href="/shop" 
+          href="/Shops" 
           className="relative px-3 py-2 font-medium transition-all duration-300 hover:text-pink-700 hover:scale-105 group"
         >
           Shop
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link 
-          href="/about" 
+          href="/About" 
           className="relative px-3 py-2 font-medium transition-all duration-300 hover:text-pink-700 hover:scale-105 group"
         >
           About
