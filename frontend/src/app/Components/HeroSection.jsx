@@ -12,14 +12,20 @@ export default function HomePage() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pink-200">
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-pink-200 via-pink-300 to-pink-400"></div>
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/vase.jpeg')",
-          filter: "blur(3px)",
-          transform: "scale(1.1)"
-        }}
-      />
+      <video
+        className="absolute inset-0 z-0 object-cover w-full h-full"
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ filter: "blur(3px)", transform: "scale(1.1)" }}
+      >
+        <source src="/bgvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Semi-transparent overlay to improve text readability */}
+      <div className="absolute inset-0 bg-white z-5 bg-opacity-40"></div>
 
       <div className="relative z-10 w-full max-w-6xl px-4 mx-auto">
         <div className="flex flex-col items-center pt-4 -mt-48">
@@ -29,9 +35,9 @@ export default function HomePage() {
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              <span className="mx-2 transition-transform duration-300 cursor-default hover:scale-110">F</span>
-              <span className="mx-2 transition-transform duration-300 cursor-default hover:scale-110">L</span>
-              <span className="mx-2 transition-transform duration-300 cursor-default hover:scale-110">O</span>
+              <span className="mx-2 transition-transform duration-300 cursor-default ">F</span>
+              <span className="mx-2 transition-transform duration-300 cursor-default ">L</span>
+              <span className="mx-2 transition-transform duration-300 cursor-default ">O</span>
               <div className="flex items-center justify-center mx-1 transition-transform duration-300 hover:scale-110 hover:rotate-12">
                 <img
                   src="/flower.png"
@@ -40,9 +46,9 @@ export default function HomePage() {
                 />
               </div>
               <div className="flex">
-                <span className="ml-0 mr-1 transition-transform duration-300 cursor-default hover:scale-110">W</span>
-                <span className="mx-0 transition-transform duration-300 cursor-default hover:scale-110">E</span>
-                <span className="ml-0 mr-2 transition-transform duration-300 cursor-default hover:scale-110">R</span>
+                <span className="ml-0 mr-1 transition-transform duration-300 cursor-default ">W</span>
+                <span className="mx-0 transition-transform duration-300 cursor-default ">E</span>
+                <span className="ml-0 mr-2 transition-transform duration-300 cursor-default ">R</span>
               </div>
             </div>
           </div>
