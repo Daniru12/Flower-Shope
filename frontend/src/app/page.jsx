@@ -4,6 +4,7 @@ import HeroSection from './Components/HeroSection'
 import SpecialOfferCard from './components/SpecialOfferCard';
 import { PromotionCard } from "./Components/PromotionCard";
 import dynamic from 'next/dynamic';
+import Review from "./Components/review";
 
 const Advertise = dynamic(() => import('./Components/Advertise'), { ssr: false });
 
@@ -15,6 +16,7 @@ export default function Home() {
       <SpecialOfferCard/>
       <PromotionCard/>
       <Advertise/>
+      <Review/>
     </>
   )
 }
