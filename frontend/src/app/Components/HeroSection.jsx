@@ -12,6 +12,14 @@ export default function HomePage() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pink-200">
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-pink-200 via-pink-300 to-pink-400"></div>
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/vase.jpeg')",
+          filter: "blur(3px)",
+          transform: "scale(1.1)"
+        }}
+      />
 
       <div className="relative z-10 w-full max-w-6xl px-4 mx-auto">
         <div className="flex flex-col items-center pt-4 -mt-48">

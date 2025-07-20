@@ -76,6 +76,8 @@ const Advertise = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50">
+
+      
       {/* Advertisement Overlay */}
       {showAdOverlay && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
