@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Header from './components/Header';
 import HeroSection from './Components/HeroSection'
-import { SpecialOfferCard } from "./Components/specialOffers";
+import SpecialOfferCard from './components/SpecialOfferCard';
 import { PromotionCard } from "./Components/PromotionCard";
-import { Advertise } from "./Components/advertise";
+import dynamic from 'next/dynamic';
+
+const Advertise = dynamic(() => import('./Components/Advertise'), { ssr: false });
 
 export default function Home() {
   return (
