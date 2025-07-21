@@ -4,7 +4,6 @@ import HeroSection from './Components/HeroSection'
 import SpecialOfferCard from './components/SpecialOfferCard';
 import { PromotionCard } from "./Components/PromotionCard";
 import dynamic from 'next/dynamic';
-
 import Review from "./Components/review";
 
 import WhyShopPage from "./components/WhyShopPage";
