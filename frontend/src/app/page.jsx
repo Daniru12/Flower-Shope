@@ -5,7 +5,7 @@ import SpecialOfferCard from './components/SpecialOfferCard';
 import { PromotionCard } from "./Components/PromotionCard";
 import dynamic from 'next/dynamic';
 import Review from "./Components/review";
-
+import Footer from "./Components/Footer";
 import WhyShopPage from "./components/WhyShopPage";
 
 
@@ -21,6 +21,7 @@ export default function Home() {
       <PromotionCard/>
       <Advertise/>
       <Review/>
+      <Footer/>
     </>
   )
 }
