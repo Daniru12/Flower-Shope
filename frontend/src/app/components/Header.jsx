@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Search, ShoppingCart, User, Menu, X, Heart } from "lucide-react";
+import { useState } from 'react';
+import { Search, ShoppingCart, User, Menu, X, Heart } from 'lucide-react';
 
-export default function Header() {
+export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
@@ -11,12 +11,12 @@ export default function Header() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/Shops" },
-    { name: "About", href: "/About" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
   ];
 
   return (
-    <header className="relative overflow-hidden text-white shadow-2xl" style={{background: 'linear-gradient(135deg, #722849 0%, #5a1e3a 50%, #42003A 100%)'}}>
+    <header className="fixed z-50 w-full text-white shadow-2xl" style={{background: 'linear-gradient(135deg, #722849 0%, #5a1e3a 50%, #42003A 100%)'}}>
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute w-12 h-12 bg-white rounded-full top-2 left-20 animate-pulse"></div>
@@ -88,14 +88,15 @@ export default function Header() {
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-3">
-            <button className="relative p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group">
-              <Heart className="w-5 h-5 transition-colors duration-300 group-hover:text-pink-300" />
-              <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-pink-500 rounded-full -top-2 -right-2">3</span>
-            </button>
+            
             
             <button className="relative p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group">
               <ShoppingCart className="w-5 h-5 transition-colors duration-300 group-hover:text-pink-300" />
-              <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-pink-500 rounded-full -top-2 -right-2">2</span>
+              {cartItemsCount > 0 && (
+                <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-pink-500 rounded-full -top-2 -right-2">
+                  {cartItemsCount}
+                </span>
+              )}
             </button>
             
             <button className="p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group">
