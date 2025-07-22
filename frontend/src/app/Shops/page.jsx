@@ -141,7 +141,7 @@ export default function BouquetPage() {
       <div className="absolute w-40 h-40 delay-1000 rounded-full bottom-32 right-20 bg-purple-200/20 blur-xl animate-pulse"></div>
       <div className="absolute w-24 h-24 delay-500 rounded-full top-1/3 right-1/4 bg-rose-300/30 blur-lg animate-bounce"></div>
       
-     
+      <Header favoritesCount={favorites.size} cartItemsCount={cartItems.size} />
       
       <div className="relative max-w-[100rem] mx-auto px-4 sm:px-6 py-12 mt-24">
         <div className="mb-16 text-center">

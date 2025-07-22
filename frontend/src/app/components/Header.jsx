@@ -11,13 +11,12 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/Shops" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/About" },
     { name: "Contact", href: "/contact" }
   ];
 
   return (
     <header className="fixed z-50 w-full text-white shadow-2xl" style={{background: 'linear-gradient(135deg, #722849 0%, #5a1e3a 50%, #42003A 100%)'}}>
-      {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute w-12 h-12 bg-white rounded-full top-2 left-20 animate-pulse"></div>
         <div className="absolute w-8 h-8 delay-1000 bg-white rounded-full top-6 right-32 animate-pulse"></div>
@@ -25,7 +24,6 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
       </div>
       
       <div className="relative flex items-center justify-between p-4 lg:px-8">
-        {/* Logo Section */}
         <div className="z-10 flex items-center space-x-3">
           <a href="/" className="flex items-center space-x-3 transition-all duration-300 hover:scale-105 group">
             <div className="relative">
@@ -43,7 +41,6 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="z-10 items-center hidden space-x-8 lg:flex">
           {navItems.map((item, index) => (
             <a
@@ -58,9 +55,7 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
           ))}
         </nav>
 
-        {/* Search and Actions */}
         <div className="z-10 flex items-center space-x-4">
-          {/* Search Bar */}
           <div className="relative hidden md:block">
             <div className={`relative transition-all duration-300 ${isSearchFocused ? 'scale-105' : ''}`}>
               <input
@@ -86,7 +81,6 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
             </div>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex items-center space-x-3">
             
             
@@ -99,12 +93,9 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
               )}
             </button>
             
-            <button className="p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group">
-              <User className="w-5 h-5 transition-colors duration-300 group-hover:text-pink-300" />
-            </button>
+            
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-3 transition-all duration-300 rounded-full lg:hidden bg-white/20 hover:bg-white/30"
@@ -114,10 +105,8 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#722849] to-[#42003A] shadow-xl transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="p-6 space-y-4">
-          {/* Mobile Search */}
           <div className="relative mb-6">
             <input
               type="text"
@@ -127,7 +116,6 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
             <Search className="absolute w-5 h-5 text-gray-500 transform -translate-y-1/2 right-3 top-1/2" />
           </div>
           
-          {/* Mobile Navigation */}
           {navItems.map((item, index) => (
             <a
               key={index}
@@ -141,7 +129,6 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
         </div>
       </div>
 
-      {/* Bottom border gradient */}
       <div className="h-1 bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500"></div>
     </header>
   );
