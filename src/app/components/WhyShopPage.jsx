@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 const WhyShopPage = () => {
@@ -172,7 +173,7 @@ const WhyShopPage = () => {
                   
                   {/* Plant Image */}
                   <div className="absolute overflow-hidden rounded-full inset-8">
-                    <img 
+                    <Image 
                       src="https://i.postimg.cc/QMvM43CP/image.png"
                       alt="Beautiful houseplant"
                       className="object-cover w-full h-full transition-transform duration-700 transform group-hover:scale-110 filter group-hover:saturate-110"

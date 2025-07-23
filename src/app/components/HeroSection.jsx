@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 export default function HomePage() {
@@ -39,7 +40,7 @@ export default function HomePage() {
               <span className="mx-2 transition-transform duration-300 cursor-default ">L</span>
               <span className="mx-2 transition-transform duration-300 cursor-default ">O</span>
               <div className="flex items-center justify-center mx-1 transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                <img
+                <Image
                   src="/flower.png"
                   alt="White tulip flower"
                   className="object-cover w-full h-screen"

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, Play, Pause, Star, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 export const EnhancedSpecialOfferSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -228,7 +229,7 @@ export const EnhancedSpecialOfferSlider = () => {
                   {/* Right image */}
                   <div className="relative overflow-hidden lg:w-1/2 h-80 lg:h-auto">
                     <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent via-transparent to-white/10"></div>
-                    <img
+                    <Image
                       src={slide.image}
                       alt={slide.alt}
                       className="object-cover w-full h-full transition-all duration-700 hover:scale-110 filter brightness-105 contrast-105"

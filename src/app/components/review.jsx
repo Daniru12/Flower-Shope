@@ -22,7 +22,7 @@ export default function Review() {
     <div className="relative w-full py-20 overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 z-0 bg-center bg-cover"
         style={{
           backgroundImage: "url('/basket.jpeg')",
           filter: "blur(4px)",
@@ -31,23 +31,23 @@ export default function Review() {
       />
 
       {/* Overlay for slight darkening */}
-      <div className="absolute inset-0 bg-white/20 z-0" />
+      <div className="absolute inset-0 z-0 bg-white/20" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4">
+      <div className="relative z-10 max-w-6xl px-4 mx-auto">
         {/* Testimonials */}
         <div className="flex justify-center">
-          <div className="bg-white/60 backdrop-blur-md rounded-3xl p-10 border border-white/40 shadow-2xl w-full lg:w-2/3">
-            <div className="text-center mb-6">
-              <h3 className="text-3xl font-bold text-black mb-3">What Our Customers Say</h3>
+          <div className="w-full p-10 border shadow-2xl bg-white/60 backdrop-blur-md rounded-3xl border-white/40 lg:w-2/3">
+            <div className="mb-6 text-center">
+              <h3 className="mb-3 text-3xl font-bold text-black">What Our Customers Say</h3>
               <div className="flex justify-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
             </div>
 
-            <div className="relative h-28 overflow-hidden">
+            <div className="relative overflow-hidden h-28">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -57,15 +57,15 @@ export default function Review() {
                       : "opacity-0 translate-y-4"
                   }`}
                 >
-                  <p className="text-lg text-black/80 italic mb-2 px-4">
-                    "{testimonial.text}"
+                  <p className="px-4 mb-2 text-lg italic text-black/80">
+                    {testimonial.text}
                   </p>
-                  <p className="text-pink-800 font-semibold">- {testimonial.author}</p>
+                  <p className="font-semibold text-pink-800">- {testimonial.author}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center space-x-2 mt-6">
+            <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -80,7 +80,7 @@ export default function Review() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+        <div className="grid grid-cols-2 gap-8 mt-20 md:grid-cols-4">
           {[
             { number: "10K+", label: "Happy Customers" },
             { number: "500+", label: "Flower Varieties" },
@@ -89,10 +89,10 @@ export default function Review() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-md"
+              className="p-6 text-center border shadow-md bg-white/60 backdrop-blur-sm rounded-2xl border-white/40"
             >
-              <div className="text-3xl font-bold text-pink-800 mb-2">{stat.number}</div>
-              <div className="text-black/70 font-medium">{stat.label}</div>
+              <div className="mb-2 text-3xl font-bold text-pink-800">{stat.number}</div>
+              <div className="font-medium text-black/70">{stat.label}</div>
             </div>
           ))}
         </div>

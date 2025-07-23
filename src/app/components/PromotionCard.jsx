@@ -171,7 +171,7 @@ export const PromotionCard = () => {
             <div className="w-8 h-8 border-2 border-white rounded-full bg-rose-400"></div>
             <div className="w-8 h-8 bg-purple-400 border-2 border-white rounded-full"></div>
           </div>
-          <span className="font-medium text-gray-700">Limited time offers - Don't miss out!</span>
+          <span className="font-medium text-gray-700">Limited time offers - Dont miss out!</span>
         </div>
       </div>
     </div>

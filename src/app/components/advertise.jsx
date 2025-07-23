@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 // Icon components
@@ -90,7 +91,7 @@ const Advertise = () => {
             </button>
 
             <div className="relative overflow-hidden rounded-t-3xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=250&fit=crop"
                 alt="Unique Flowers"
                 className="object-cover w-full h-48"
@@ -148,7 +149,7 @@ const Advertise = () => {
         <div className={`bg-gradient-to-br ${current.color} rounded-3xl overflow-hidden shadow-2xl mb-12 transform hover:scale-[1.02] transition-transform duration-500`}>
           <div className="flex flex-col lg:flex-row">
             <div className="relative overflow-hidden lg:w-1/2">
-              <img
+              <Image
                 src={current.image}
                 alt={current.title}
                 className="object-cover w-full transition-transform duration-700 h-80 lg:h-full hover:scale-110"
@@ -246,7 +247,7 @@ const Advertise = () => {
                 className={`bg-gradient-to-br ${ad.color} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer`}
                 onClick={() => setCurrentAd(advertisements.findIndex(a => a.id === ad.id))}
               >
-                <img
+                <Image
                   src={ad.image}
                   alt={ad.title}
                   className="object-cover w-full h-48"

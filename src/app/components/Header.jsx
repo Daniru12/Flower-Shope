@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Heart } from 'lucide-react';
 import Link from 'next/link'; // Assuming you are using Next.js for routing
+import Image from 'next/image';
 
 export default function Header({ favoritesCount = 0, cartItemsCount = 0, onCartClick }) { // Accept onCartClick prop
   const [isSearchFocused, setIsSearchFocused] = useState(false);
@@ -29,7 +30,7 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0, onCartC
         <div className="z-10 flex items-center space-x-3">
           <Link href="/" className="flex items-center space-x-3 transition-all duration-300 hover:scale-105 group">
             <div className="relative">
-              <img
+              <Image
                 src="/logo.png" 
                 alt="Flower Shop Logo"
                 className="object-contain w-20 h-auto transition-all duration-300 group-hover:drop-shadow-lg"

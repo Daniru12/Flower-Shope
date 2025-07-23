@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { Heart, ShoppingCart, Star, Sparkles, X } from 'lucide-react'; // Import X for close button
 import { toast, Toaster } from 'react-hot-toast'; // Import toast and Toaster
 import Header from '../components/Header';
+import Image from 'next/image';
 
 const bouquets = [
   { id: 1, name: "Birthday Surprise", price: "39.99", category: "Birthday", image: "/shop2.jpeg", rating: 4.8 },
@@ -138,7 +139,7 @@ export default function BouquetPage() {
     return (
       <div className="overflow-hidden transition-all duration-500 transform border shadow-lg group bg-white/80 backdrop-blur-sm rounded-2xl hover:shadow-2xl hover:shadow-pink-200/50 hover:-translate-y-2 hover:scale-105 border-white/50">
         <div className="relative overflow-hidden">
-          <img
+          <Image
             src={bouquet.image}
             alt={bouquet.name}
             className="object-cover w-full h-64 transition-transform duration-700 group-hover:scale-110"
@@ -302,7 +303,7 @@ export default function BouquetPage() {
                 <ul className="space-y-4">
                   {cartItems.map((item) => (
                     <li key={item.id} className="flex items-center p-4 border rounded-lg">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
                         className="object-cover w-16 h-16 rounded-md"
