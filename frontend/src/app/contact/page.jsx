@@ -35,23 +35,32 @@ export default function Contact() {
 
   return (
     // Make this container relative and add overflow-hidden
-    <div className="relative px-4 py-16 mx-auto overflow-hidden max-w-7xl">
+    <div className="relative w-full min-h-screen px-4 pt-32 pb-16 overflow-x-hidden bg-white/30">
+
+
 
       {/* Background layers with negative z-index to be behind */}
-      <div
-  className="fixed top-0 left-0 w-full h-full bg-center bg-no-repeat bg-cover -z-10"
+<div
+  className="fixed inset-0 bg-center bg-no-repeat bg-cover -z-20"
   style={{
-    backgroundImage: `url('/image.png')`,
+    backgroundImage: `url('/contactimg.png')`,
   }}
 />
 
-      <div className="absolute inset-0 backdrop-blur-sm bg-white/30 -z-10" />
+<div className="fixed inset-0 backdrop-blur-sm bg-white/30 -z-10" />
+
 
       {/* Page content */}
-      <div className="mb-12 text-center">
-        <h2 className="text-4xl font-bold text-pink-800">Contact Us</h2>
-        <p className="mt-2 text-gray-600">We’d love to hear from you!</p>
-      </div>
+<div className="mb-12 text-center">
+  <h2 className="text-4xl font-bold text-pink-800">Contact Us</h2>
+  <p className="mt-4 text-lg font-semibold leading-relaxed text-black">
+    Have questions or special floral requests? Whether you're planning a dream wedding, surprising a loved one, or just need help picking the perfect bouquet — we’re always ready to assist you with care and creativity. <br />
+    Reach out today and let Bloom Haven turn your thoughts into beautiful, fragrant moments.
+  </p>
+</div>
+
+
+
 
       {/* Contact Info */}
       <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
