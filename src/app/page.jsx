@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import WhyShopPage from "./components/WhyShopPage";
 
 
-const Advertise = dynamic(() => import('./components/Advertise'), { ssr: false });
+const Advertise = dynamic(() => import('./components/advertise'), { ssr: false });
 
 export default function Home() {
   return (
