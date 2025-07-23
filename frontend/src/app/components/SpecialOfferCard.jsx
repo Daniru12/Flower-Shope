@@ -13,7 +13,7 @@ export const SpecialOfferSlider = () => {
       badge: "Special Offers",
       title: { part1: "Get", highlight: "50%", part2: "Off Discount" },
       buttonText: "Get Now",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+      image: "/contactimg.png",
       alt: "Pink peonies in white vase",
       bgColor: "bg-pink-200"
     },
@@ -22,7 +22,7 @@ export const SpecialOfferSlider = () => {
       badge: "Limited Time",
       title: { part1: "Save", highlight: "40%", part2: "On Premium" },
       buttonText: "Shop Now",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+      image: "/special1.png",
       alt: "Beautiful flower arrangement",
       bgColor: "bg-purple-200"
     },
@@ -31,7 +31,7 @@ export const SpecialOfferSlider = () => {
       badge: "Flash Sale",
       title: { part1: "Up to", highlight: "70%", part2: "Off Everything" },
       buttonText: "Explore",
-      image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600&h=400&fit=crop",
+      image: "/special3.png",
       alt: "Elegant roses bouquet",
       bgColor: "bg-blue-200"
     },
@@ -40,7 +40,7 @@ export const SpecialOfferSlider = () => {
       badge: "New Collection",
       title: { part1: "Fresh", highlight: "30%", part2: "Spring Deals" },
       buttonText: "Discover",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop",
+      image: "/image.png",
       alt: "Spring flower collection",
       bgColor: "bg-green-200"
     },
