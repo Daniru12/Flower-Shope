@@ -30,7 +30,7 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0, onCartC
           <Link href="/" className="flex items-center space-x-3 transition-all duration-300 hover:scale-105 group">
             <div className="relative">
               <img
-                src="/image.png"
+                src="/logo.png" 
                 alt="Flower Shop Logo"
                 className="object-contain w-20 h-auto transition-all duration-300 group-hover:drop-shadow-lg"
               />
