@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Header from './components/Header';
+
 import HeroSection from './Components/HeroSection'
 import SpecialOfferCard from './components/SpecialOfferCard';
 import { PromotionCard } from "./Components/PromotionCard";
@@ -13,7 +13,7 @@ const Advertise = dynamic(() => import('./Components/Advertise'), { ssr: false }
 
 export default function Home() {
   return (
-    <>
+    <div>
     
     
       <HeroSection />
@@ -23,6 +23,6 @@ export default function Home() {
       <Advertise/>
       <Review/>
       <Footer/>
-    </>
+    </div>
   )
 }
