@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import {
   Send,
@@ -17,7 +16,6 @@ export default function Contact() {
     email: "",
     message: "",
   });
-
   const [showThankYou, setShowThankYou] = useState(false);
 
   const handleChange = (e) => {
@@ -36,31 +34,23 @@ export default function Contact() {
   return (
     // Make this container relative and add overflow-hidden
     <div className="relative w-full min-h-screen px-4 pt-32 pb-16 overflow-x-hidden bg-white/30">
-
-
-
       {/* Background layers with negative z-index to be behind */}
-<div
-  className="fixed inset-0 bg-center bg-no-repeat bg-cover -z-20"
-  style={{
-    backgroundImage: `url('/contactimg.png')`,
-  }}
-/>
-
-<div className="fixed inset-0 backdrop-blur-sm bg-white/30 -z-10" />
-
+      <div
+        className="fixed inset-0 bg-center bg-no-repeat bg-cover -z-20"
+        style={{
+          backgroundImage: `url('/contactimg.png')`,
+        }}
+      />
+      <div className="fixed inset-0 backdrop-blur-sm bg-white/30 -z-10" />
 
       {/* Page content */}
-<div className="mb-12 text-center">
-  <h2 className="text-4xl font-bold text-pink-800">Contact Us</h2>
-  <p className="mt-4 text-lg font-semibold leading-relaxed text-black">
-    Have questions or special floral requests? Whether you're planning a dream wedding, surprising a loved one, or just need help picking the perfect bouquet — we’re always ready to assist you with care and creativity. <br />
-    Reach out today and let Bloom Haven turn your thoughts into beautiful, fragrant moments.
-  </p>
-</div>
-
-
-
+      <div className="mb-12 text-center">
+        <h2 className="text-4xl font-bold text-pink-800">Contact Us</h2>
+        <p className="mt-4 text-lg font-semibold leading-relaxed text-black">
+          Have questions or special floral requests? Whether you&#39;re planning a dream wedding, surprising a loved one, or just need help picking the perfect bouquet — we&#39;re always ready to assist you with care and creativity. <br />
+          Reach out today and let Bloom Haven turn your thoughts into beautiful, fragrant moments.
+        </p>
+      </div>
 
       {/* Contact Info */}
       <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
@@ -75,7 +65,6 @@ export default function Contact() {
             No 12, Flower Lane, Colombo 03
           </p>
         </div>
-
         <div className="p-8 transition-all duration-300 transform border border-pink-100 shadow-lg group bg-gradient-to-br from-white to-pink-50/30 hover:shadow-2xl rounded-2xl hover:scale-105 hover:border-pink-200">
           <div className="flex items-center justify-center mb-4 transition-shadow duration-300 rounded-full shadow-md w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 group-hover:shadow-lg">
             <Phone className="text-white" size={24} />
@@ -87,7 +76,6 @@ export default function Contact() {
             +94 77 123 4567
           </p>
         </div>
-
         <div className="p-8 transition-all duration-300 transform border border-pink-100 shadow-lg group bg-gradient-to-br from-white to-pink-50/30 hover:shadow-2xl rounded-2xl hover:scale-105 hover:border-pink-200">
           <div className="flex items-center justify-center mb-4 transition-shadow duration-300 rounded-full shadow-md w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 group-hover:shadow-lg">
             <Mail className="text-white" size={24} />
@@ -99,7 +87,6 @@ export default function Contact() {
             info@bloomhaven.lk
           </p>
         </div>
-
         <div className="p-8 transition-all duration-300 transform border border-pink-100 shadow-lg group bg-gradient-to-br from-white to-pink-50/30 hover:shadow-2xl rounded-2xl hover:scale-105 hover:border-pink-200">
           <div className="flex items-center justify-center mb-4 transition-shadow duration-300 rounded-full shadow-md w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 group-hover:shadow-lg">
             <Clock className="text-white" size={24} />
@@ -123,9 +110,8 @@ export default function Contact() {
               </div>
             </div>
             <h3 className="mb-2 text-3xl font-bold text-white">Send Us a Message</h3>
-            <p className="text-pink-100">Let's create something beautiful together</p>
+            <p className="text-pink-100">Let&#39;s create something beautiful together</p>
           </div>
-
           <div className="p-10">
             <div className="space-y-6">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -170,7 +156,6 @@ export default function Contact() {
                 </button>
               </div>
             </div>
-
             {showThankYou && (
               <div className="p-6 mt-6 text-green-800 border-2 border-green-200 shadow-lg bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl backdrop-blur-sm">
                 <div className="flex items-center justify-center">
@@ -188,7 +173,7 @@ export default function Contact() {
       {/* CTA */}
       <div className="mt-16 text-center">
         <h3 className="mb-4 text-2xl font-bold text-pink-800">
-          Let’s Make Your Event Unforgettable
+          Let&#39;s Make Your Event Unforgettable
         </h3>
         <p className="mb-6 text-gray-600">
           Reach out today to start planning your perfect celebration.
