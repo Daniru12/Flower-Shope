@@ -1,15 +1,15 @@
 import Image from "next/image";
 
-import HeroSection from './Components/HeroSection'
+import HeroSection from './components/HeroSection'
 import SpecialOfferCard from './components/SpecialOfferCard';
-import { PromotionCard } from "./Components/PromotionCard";
+import { PromotionCard } from "./components/PromotionCard";
 import dynamic from 'next/dynamic';
-import Review from "./Components/review";
-import Footer from "./Components/Footer";
+import Review from "./components/review";
+import Footer from "./components/Footer";
 import WhyShopPage from "./components/WhyShopPage";
 
 
-const Advertise = dynamic(() => import('./Components/Advertise'), { ssr: false });
+const Advertise = dynamic(() => import('./components/Advertise'), { ssr: false });
 
 export default function Home() {
   return (
