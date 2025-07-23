@@ -1,9 +1,11 @@
+// Header.js
 'use client';
 
 import { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Heart } from 'lucide-react';
+import Link from 'next/link'; // Assuming you are using Next.js for routing
 
-export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
+export default function Header({ favoritesCount = 0, cartItemsCount = 0, onCartClick }) { // Accept onCartClick prop
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
@@ -22,13 +24,13 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
         <div className="absolute w-8 h-8 delay-1000 bg-white rounded-full top-6 right-32 animate-pulse"></div>
         <div className="absolute w-6 h-6 delay-500 bg-white rounded-full bottom-2 left-1/3 animate-pulse"></div>
       </div>
-      
+
       <div className="relative flex items-center justify-between p-4 lg:px-8">
         <div className="z-10 flex items-center space-x-3">
-          <a href="/" className="flex items-center space-x-3 transition-all duration-300 hover:scale-105 group">
+          <Link href="/" className="flex items-center space-x-3 transition-all duration-300 hover:scale-105 group">
             <div className="relative">
               <img
-                src="/image.png" 
+                src="/image.png"
                 alt="Flower Shop Logo"
                 className="object-contain w-20 h-auto transition-all duration-300 group-hover:drop-shadow-lg"
               />
@@ -38,12 +40,12 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
               <h1 className="text-xl font-bold text-pink-100">The Bloom Room</h1>
               <p className="text-xs text-pink-200">Beautiful Moments</p>
             </div>
-          </a>
+          </Link>
         </div>
 
         <nav className="z-10 items-center hidden space-x-8 lg:flex">
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.href}
               className="relative px-4 py-2 font-medium text-pink-100 transition-all duration-300 hover:text-white hover:scale-105 group"
@@ -51,7 +53,7 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
               <span className="relative z-10">{item.name}</span>
               <div className="absolute inset-0 transition-transform duration-300 ease-out scale-0 rounded-lg bg-white/20 group-hover:scale-100"></div>
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-pink-300 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -82,9 +84,12 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
           </div>
 
           <div className="flex items-center space-x-3">
-            
-            
-            <button className="relative p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group">
+            {/* Cart Button - Updated to call onCartClick */}
+            <button
+              onClick={onCartClick} // Use the passed function
+              className="relative p-3 transition-all duration-300 rounded-full bg-white/20 hover:bg-white/30 hover:scale-110 group"
+              aria-label="View shopping cart"
+            >
               <ShoppingCart className="w-5 h-5 transition-colors duration-300 group-hover:text-pink-300" />
               {cartItemsCount > 0 && (
                 <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white bg-pink-500 rounded-full -top-2 -right-2">
@@ -92,13 +97,12 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
                 </span>
               )}
             </button>
-            
-            
           </div>
 
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-3 transition-all duration-300 rounded-full lg:hidden bg-white/20 hover:bg-white/30"
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -115,16 +119,16 @@ export default function Header({ favoritesCount = 0, cartItemsCount = 0 }) {
             />
             <Search className="absolute w-5 h-5 text-gray-500 transform -translate-y-1/2 right-3 top-1/2" />
           </div>
-          
+
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.href}
               className="block px-4 py-3 text-pink-100 transition-colors duration-300 rounded-lg hover:text-white hover:bg-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

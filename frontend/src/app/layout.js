@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mt-0 p-0`}
       >
         <Header />
         <main className="p-0 m-0">{children}</main>

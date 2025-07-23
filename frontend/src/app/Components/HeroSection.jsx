@@ -27,8 +27,8 @@ export default function HomePage() {
       {/* Semi-transparent overlay to improve text readability */}
       <div className="absolute inset-0 bg-white z-5 bg-opacity-40"></div>
 
-      <div className="relative z-10 w-full max-w-6xl px-4 mx-auto">
-        <div className="flex flex-col items-center pt-4 -mt-48">
+      <div className="relative z-10 w-full max-w-6xl px-4 pt-20 mx-auto">
+        <div className="flex flex-col items-center pt-20 -mt-48">
           <div className="relative flex items-center justify-center w-full">
             <div
               className={`text-7xl md:text-9xl lg:text-[10rem] font-bold tracking-widest bg-gradient-to-br from-[#CF0B63] via-[#5a0429] to-black bg-clip-text text-transparent flex items-center justify-center transform transition-all duration-1000 ${
