@@ -7,7 +7,7 @@ This is a modern **Next.js 13+ project** using the **App Router**, with support 
 
 ## 🚀 Features
 
-- ✅ Next.js 13+ App Router
+- ✅ Next.js 
 - 🎨 Tailwind CSS for styling
 - 🧱 Modular folder structure (`components/`, `contact/`, `About/`, `Shops/`)
 - 🌐 Favicon integration via `/public/favicon.ico`
